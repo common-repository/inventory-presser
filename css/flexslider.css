@@ -1,0 +1,71 @@
+.flexslider{
+	margin-bottom: 0;
+	border: 0;
+	background: none;
+}
+#slider.flexslider,
+#carousel.flexslider{
+	box-sizing: content-box;
+}
+#slider .flex-direction-nav a,
+#carousel .flex-direction-nav a{
+	top: 0;
+	bottom: 0;
+}
+#carousel .flex-direction-nav a{
+	width: 10%;
+	max-width: 60px;
+}
+.flex-direction-nav a {
+	height: 100%;
+	transition: none;
+	opacity: 1;
+	color: #fff;
+	margin: 0;
+}
+.flex-direction-nav a:before{
+	color: #fff;
+	text-shadow: -1px 0 #666, 0 1px #666, 1px 0 #666, 0 -1px #666;
+}
+.flexslider:hover .flex-direction-nav .flex-prev,
+.flexslider:hover .flex-direction-nav .flex-next{
+	opacity: 1;
+}
+ul.flex-direction-nav li{
+	line-height: 1;
+}
+#slider ul.flex-direction-nav li::marker,
+#carousel ul.flex-direction-nav li::marker{
+	content: none;
+}
+.flex-direction-nav a:focus{
+	outline: none;
+}
+.flex-direction-nav .flex-next,
+.flexslider:hover .flex-direction-nav .flex-next{
+	right: 0;
+	padding-right: .5em;
+}
+.flex-direction-nav .flex-prev,
+.flexslider:hover .flex-direction-nav .flex-prev{
+	left: 0;
+	padding-left: .5em;
+}
+.flexslider .slides img{
+	cursor: pointer;
+	width: auto;
+}
+/* speed up animation when the next and previous buttons move */
+.flex-viewport{
+	width: 100%;
+	/*-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease; commented out because youtube embeds interfering problem https://stackoverflow.com/a/12077650/338432 */
+}
+/* chrome fix */
+.flexslider .slides > li {
+	display: list-item;
+	-webkit-backface-visibility: hidden;
+}

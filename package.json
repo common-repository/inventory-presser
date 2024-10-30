@@ -1,0 +1,26 @@
+{
+	"name": "inventory-presser",
+	"version": "14.17.1",
+	"description": "Simple inventory listings & everything else",
+	"main": "build/index.js",
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build && cp -R node_modules/leaflet/dist/ js/leaflet  && cp -R node_modules/iframe-resizer/js/ js/iframe-resizer && minify js/leaflet/leaflet.css > js/leaflet/leaflet.min.css && minify vendor/woocommerce/FlexSlider/flexslider.css > css/woocommerce-flexslider.min.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/csalzano/inventory-presser.git"
+	},
+	"author": "csalzano",
+	"license": "GPL-2.0-only",
+	"bugs": {
+		"url": "https://github.com/csalzano/inventory-presser/issues"
+	},
+	"homepage": "https://github.com/csalzano/inventory-presser#readme",
+	"devDependencies": {
+		"@wordpress/scripts": "^30.1.0",
+		"iframe-resizer": "^4.3.2",
+		"leaflet": "^1.7.1",
+		"minify": "^8.0.4"
+	}
+}
